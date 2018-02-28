@@ -1,33 +1,38 @@
 # Lesson 2
-## BinaryGap
+
+## OddOccurrencesInArray
 ```cpp
-int solution(int N) 
+int solution(std::vector<int> &A) 
 {
     // write your code in C++14 (g++ 6.2.0)
     
-        const int N_FLG = 0x1;
-        const int N_EOF = 0x0;
-        
-        int nMax = 0;
-        int nAcc = 0;
-        int nData = 0;
-        while( N != N_EOF )
-        {
-            if( N & N_FLG )
-            {
-                nMax = std::max( nMax, nAcc );
-                nAcc = 0;
-                nData = N & N_FLG;
-            }
-            else
-            {
-                nAcc += nData;
-            }
-            
-            N = N >> 1;
-        }
-        
-        return nMax;
+	int nRes = 0;
+	for( int nData : A )
+		nRes ^= nData;
+
+	return nRes;
 }
 ```
+
+## CyclicRotation
+```cpp
+std::vector<int> solution(std::vector<int> &A, int K)
+{
+	if( A.empty() )
+		return std::vector<int>();
+
+	auto size = A.size();
+	auto res = K % size;
+
+	std::vector<int> vRes( size );
+	for( unsigned int indx=0; indx<size; ++indx )
+	{
+		auto i = (indx + res) % size;
+		vRes[ i ] = A[ indx ];
+	}
+
+	return vRes;
+}
+```
+
 

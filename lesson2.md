@@ -1,6 +1,5 @@
-# Lesson 1
+# Lesson 2
 ## BinaryGap
-
 ```cpp
 int solution(int N) 
 {

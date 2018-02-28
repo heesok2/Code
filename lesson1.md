@@ -1,7 +1,5 @@
 # Lesson 1
-
-BinaryGap
-======
+## BinaryGap
 
 ```cpp
 

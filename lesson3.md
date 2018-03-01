@@ -1,5 +1,5 @@
-# Lesson 3
-Time Complexity
+Lesson 3
+# Time Complexity
 
 ## TapeEquilibrium
 ```cpp

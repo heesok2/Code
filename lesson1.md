@@ -1,5 +1,5 @@
-# Lesson 1
-Iterations
+Lesson 1
+# Iterations
 
 ## BinaryGap
 ```cpp

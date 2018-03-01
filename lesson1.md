@@ -1,6 +1,7 @@
 # Lesson 1
-## BinaryGap
+Iterations
 
+## BinaryGap
 ```cpp
 int solution(int N) 
 {

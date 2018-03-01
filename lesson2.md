@@ -1,4 +1,5 @@
 # Lesson 2
+Arrays
 
 ## OddOccurrencesInArray
 ```cpp

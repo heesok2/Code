@@ -7,9 +7,9 @@ Lesson 3
 int solution(std::vector<int> &A)
 {
     // write your code in C++14 (g++ 6.2.0)
-    
+
     int nAcc = 0;
-    for( auto nData : A ) 
+    for( auto nData : A )
         nAcc += nData;
 
     int nLeft = 0;
@@ -22,17 +22,17 @@ int solution(std::vector<int> &A)
         nRight -= A[indx];
         nMin = std::min( nMin, abs(nLeft - nRight) );
     }
-    
+
     return nMin;
 }
 ```
 
 ## FrogJmp
 ```cpp
-int solution(int X, int Y, int D) 
+int solution(int X, int Y, int D)
 {
     // write your code in C++14 (g++ 6.2.0)
-    
+
     int nData = (Y - X) / D;
     int nRes = (Y - X ) % D;
     return nRes > 0 ? (nData+1) : nData;
@@ -43,26 +43,25 @@ int solution(int X, int Y, int D)
 ## PermMissingElem
 ```cpp
 #include <algorithm>
-int solution(std::vector<int> &A) {
+int solution(std::vector<int> &A)
+{
     // write your code in C++14 (g++ 6.2.0)
-	if( A.empty() ) return 1;
+    if( A.empty() ) return 1;
 
-	int nRes = 0;
-	if( A.size() > 1 )
-	{
-		std::sort( A.begin(), A.end() );
-		for( int nData=A.front(); nData<=A.back(); ++nData )
-			nRes ^= nData;
+    int nRes = 0;
+    if( A.size() > 1 )
+    {
+        std::sort( A.begin(), A.end() );
+        for( int nData=A.front(); nData<=A.back(); ++nData )
+            nRes ^= nData;
 
-		for( int nData : A )
-			nRes ^= nData;
-	}
+        for( int nData : A )
+            nRes ^= nData;
+    }
 
-	if( nRes == 0 )
-		return A.front() > 1 ? 1 : A.back()+1;
+    if( nRes == 0 )
+        return A.front() > 1 ? 1 : A.back()+1;
 
-	return nRes;
+    return nRes;
 }
 ```
-
-
